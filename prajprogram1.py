@@ -103,10 +103,22 @@ def dict1():
         b=input("Enter the key you want to pop(): ")
         thisdict.pop(b)
         print(thisdict)
-lists()
-tuples1()
-sets1()
-dict1()
+def main():
+    x=int(input("Select from the list of data structures to perform operations: \n 1. Lists\n 2. Tuples\n 3.Sets 4. Dictionary\n"))
+    if x==1:
+        lists()
+    if x==2:
+        tuples1()
+    if x==3:
+        sets1()
+    if x==4:
+        dict1()
+    elif:
+        print("Wrong choice")
+        
+ if __name__ == "__main__": 
+    main()
+    
 
 
 

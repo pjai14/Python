@@ -73,7 +73,7 @@ def sets1():
     if a==5:
         sets2={"grey","purple","violet"}
         print("Your first set is: "+ str(sets))
-        print("Your second set is: "+ str(set2))
+        print("Your second set is: "+ str(sets2))
         sets.union(sets2)
         print("Union of two sets is: "+str(sets))
 
@@ -104,7 +104,8 @@ def dict1():
         thisdict.pop(b)
         print(thisdict)
 def main():
-    x=int(input("Select from the list of data structures to perform operations: \n 1. Lists\n 2. Tuples\n 3.Sets 4. Dictionary\n"))
+  while(True):
+    x=int(input("Select from the list of data structures to perform operations: \n 1. Lists\n 2. Tuples\n 3. Sets\n 4. Dictionary\n"))
     if x==1:
         lists()
     if x==2:
@@ -113,20 +114,8 @@ def main():
         sets1()
     if x==4:
         dict1()
-    elif:
+    else:
         print("Wrong choice")
-        
- if __name__ == "__main__": 
-    main()
-    
-
-
-
-
-
-
-
-
-
-
-
+  main()        
+if __name__ == "__main__": 
+  main()

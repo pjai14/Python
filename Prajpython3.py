@@ -21,7 +21,7 @@ print("\nSlicing characters between " +
 print(String1[3:-2]) 
 
 # Updating a String 
-String1 = "This is a string program"
+String1 = "this is a string program"
 print("\nUpdated String: ") 
 print(String1) 
 
@@ -56,6 +56,12 @@ print(String5)
 String6 = "{l} {f} {g}".format(g = 'Geeks', f = 'For', l = 'Life') 
 print("\nPrint String in order of Keywords: ") 
 print(String6) 
+
+#capitalize first letter
+print('str.capitalize() = ', String1.capitalize())
+
+#computes length of a string
+print('len(str) = ', len(String1))
 
 # Deleting a String 
 # with the use of del 

@@ -1,35 +1,30 @@
-count = 0;  
-word = "";  
-maxCount = 0;  
-words = [];  
-   
-#Opens a file in read mode  
-file = open("test.txt", "r")  
-      
-#Gets each line till end of file is reached  
-for line in file:  
-    #Splits each line into words  
-    string = line.lower().replace(',','').replace('.','').split(" ");  
-    #Adding all words generated in previous step into words  
-    for s in string:  
-        words.append(s);  
-   
-#Determine the most repeated word in a file  
-for i in range(0, len(words)):  
-    count = 1;  
-    #Count each word in the file and store it in variable count  
-    for j in range(i+1, len(words)):  
-        if(words[i] == words[j]):  
-            count = count + 1;  
-              
-    #If maxCount is less than count then store value of count in maxCount  
-    #and corresponding word to variable word  
-    if(count > maxCount):  
-        maxCount = count;  
-        word = words[i];  
-          
-print("Most repeated word: " + word);  
-file.close();  
+s = open('test.txt','r').read()  
+num_chars = len(s)
+num_lines = s.count('\n')
+words = s.split()
+d = {}
+for w in words:
+    if w in d:
+        d[w] += 1
+    else:
+        d[w] = 1
+
+num_words = sum(d[w] for w in d)
+
+lst = [(d[w],w) for w in d]
+lst.sort()
+lst.reverse()
+print('Your input file has characters = '+str(num_chars))
+print('Your input file has lines = '+str(num_lines))
+print('Your input file has the following words = '+str(num_words))
+
+print('\n The most frequent words are /n')
+
+i = 1
+for count, word in lst[:5]:
+    print('%2s. %s %s' %(i,count,word))
+    i+= 1
+
 
 
 test.txt: 
